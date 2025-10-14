@@ -1,0 +1,105 @@
+console.log("IT'S ALIVE!");
+
+function $$(selector, context = document) {
+    return Array.from(context.querySelectorAll(selector));
+}
+
+let navLinks = $$("nav a");
+let currentLink = navLinks.find(
+    (a) => a.host === location.host && a.pathname === location.pathname
+)
+
+if (currentLink) {
+    // or if (currentLink !== undefined)
+    currentLink.classList.add('current');
+}
+
+let pages = [
+    { url: '', title: 'Home' },
+    { url: 'projects/', title: 'Projects' },
+    { url: 'contact/', title: 'Contact' },
+    { url: 'resume/', title: 'Resume' },
+    { url: 'https://github.com/hangyizhao949', title: 'GitHub' },
+];
+
+let nav = document.createElement('nav');
+document.body.prepend(nav);
+
+
+const BASE_PATH =
+    location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+        ? '/' // Local server
+        : '/portfolio/'; // GitHub Pages repo name
+
+for (let p of pages) {
+    let url = p.url;
+    let title = p.title;
+    if (!url.startsWith('http')) {
+        url = BASE_PATH + url;
+    }
+    let a = document.createElement('a');
+    a.href = url;
+    a.textContent = title;
+    nav.append(a);
+
+    if (a.host === location.host && a.pathname === location.pathname) {
+        a.classList.add('current');
+    }
+
+    if (a.host !== location.host) {
+        a.target = "_blank";
+    }
+}
+
+document.body.insertAdjacentHTML(
+    'afterbegin',
+    `
+    <label class="color-scheme">
+        Theme:
+        <select>
+            <option value="light dark">Automatic</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+
+    </label>
+    `
+);
+
+// let the select dropdown fixed in the upper right
+const navElement = document.querySelector("nav");
+const label = document.querySelector(".color-scheme");
+navElement.insertAdjacentElement("afterend", label);
+
+
+
+// get the elements in 'select' 
+const select = document.querySelector('.color-scheme select');
+// get user's event
+select.addEventListener('input', function (event) {
+    console.log('color scheme changed to', event.target.value);
+    // change the color-scheme in the root element
+    document.documentElement.style.setProperty('color-scheme', event.target.value);
+    localStorage.colorScheme = event.target.value;
+});
+
+// if the colorScheme in localStorage, then use it
+if ('colorScheme' in localStorage) {
+    const savedScheme = localStorage.colorScheme;
+    document.documentElement.style.setProperty('color-scheme', savedScheme);
+    select.value = savedScheme;
+}
+
+const form = document.querySelector("form");
+form?.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const data = new FormData(form)
+    for (let [name, value] of data) {
+        // 对 value 进行安全编码，防止空格变成 +
+        params.push(`${name}=${encodeURIComponent(value)}`);
+    }
+    const url = form.action + "?" + params.join("&");
+
+    console.log("Generated mailto URL:", url);
+    location.href = url;
+});
