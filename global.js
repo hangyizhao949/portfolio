@@ -90,12 +90,13 @@ if ('colorScheme' in localStorage) {
     select.value = savedScheme;
 }
 
+const params = [];
 const form = document.querySelector("form");
 form?.addEventListener("submit", function (event) {
     event.preventDefault();
     const data = new FormData(form)
     for (let [name, value] of data) {
-        // 对 value 进行安全编码，防止空格变成 +
+        // not let space change to '+' 
         params.push(`${name}=${encodeURIComponent(value)}`);
     }
     const url = form.action + "?" + params.join("&");
