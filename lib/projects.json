@@ -3,7 +3,7 @@
         "title": "Food Processing and Price Patterns Across Top Food Categories",
         "year": "2025",
         "image": "../images/Food Processing and Price Patterns Across Top Food Categories.png",
-        "description": "Visualized how NOVA food processing levels correlate with product prices across Walmart, Target, and Whole Foods. The analysis revealed that ultra-processed foods generally cost more in premium stores, while less processed items show smaller price variation across retailers. The project highlights how data visualization can uncover consumer and market trends through categorical comparison and aggregation."
+        "description": "This visualization reveals that the relationship between food processing level and price is not consistent across categories. In prepared meals and snack bars, more processed foods (NOVA class 2 and 3) are often more expensive, while for cookies and candies, prices remain similar across all processing levels. These results suggest that processing level alone does not determine product price, factors such as brand or package weight also play a role. Overall, the relationship appears category-dependent rather than linear."
     },
     {
         "title": "NLP Article Review",
@@ -15,60 +15,60 @@
         "title": "Iris Flower Clustering with K-Means",
         "year": "2024",
         "image": "../images/Iris Flower Clustering with K-Means.png",
-        "description": "Implemented K-Means clustering on the Iris dataset to identify natural groupings of flowers based on their sepal and petal measurements. Visualized clusters using scatter plots with different colors marking cluster centers. The project demonstrates the core idea of unsupervised learning, showing how feature similarity can be used to discover hidden patterns without labels."
+        "description": "Used K-Means clustering to find natural groups of flowers in the Iris dataset based on sepal and petal features. Visualized the results with colored scatter plots showing cluster centers. The project shows how unsupervised learning can discover patterns in data without using labels."
     },
     {
         "title": "Airbnb Price Analysis in San Diego",
         "year": "2024",
         "image": "../images/Airbnb Price Analysis in San Diego.png",
-        "description": "Explored Airbnb property listings in San Diego using Python and data visualization. Analyzed price distribution through histograms and statistical summaries, revealing that most listings are concentrated in low price ranges with few luxury outliers."
+        "description": "Analyzed Airbnb listings in San Diego using Python and data visualization. The histogram shows that most listings are in lower price ranges, with a few high-end outliers. This project explores local housing price distribution and highlights market imbalance between budget and luxury rentals."
     },
     {
         "title": "Weather Classification Using Decision Tree and Logistic Regression",
         "year": "2024",
         "image": "../images/Weather Classification.png",
-        "description": "Built and compared two classification models — Decision Tree and Logistic Regression — to predict whether the weather conditions correspond to high humidity. The dataset includes features such as air temperature, pressure, wind speed, and rainfall. The analysis involved visualizing distributions of each variable using histograms, training both classifiers on pre-processed weather data, and evaluating their accuracy on train and test sets. Results showed that logistic regression performed more robustly on unseen data, while decision tree captured more complex patterns in training."
+        "description": "Compared two models, Decision Tree and Logistic Regression to predict whether the weather has high humidity. Visualized key features such as air temperature, pressure, wind speed, and rainfall."
     },
     {
         "title": "Handwritten Digit Recognition with 1-Nearest Neighbor",
         "year": "2025",
         "image": "../images/Handwriting recognize.png",
-        "description": "Implemented a 1-Nearest Neighbor (1-NN) classifier on the MNIST dataset to identify handwritten digits. For each test image, the model searches for the closest training image based on pixel distance. Visualized examples show the test digit and its nearest neighbor from the training set, demonstrating accurate recognition for most digits and providing an intuitive understanding of distance-based classification."
+        "description": "Built a 1-Nearest Neighbor classifier on the MNIST dataset to recognize handwritten digits. For each test image, the model finds the closest training image based on pixel distance. Visualization shows the test digit and its nearest match, helping explain how simple distance-based classification works."
     },
     {
         "title": "Customer Occupation and Account Balance Analysis",
         "year": "2024",
         "image": "../images/Customer Occupation and Account Balance Analysis.png",
-        "description": "Analyzed a financial transaction dataset to identify the most active transaction hours during the day. Extracted hour information from timestamps and visualized frequency using a bar plot. The results show that transaction activity peaks around 4 PM, with over 1,200 recorded transactions, followed by a sharp decline after 6 PM. This analysis helps understand customer behavior and temporal transaction patterns."
+        "description": "Analyzed customer financial transactions to explore the relationship between occupation and account balance. Visualized distributions with boxplots and found that doctors generally hold higher balances, while students have the lowest. The results highlight how income level and spending habits vary across different occupations."
     },
     {
         "title": "Transaction Frequency Analysis by Hour",
         "year": "2024",
         "image": "../images/Transaction Frequency Analysis by Hour.png",
-        "description": "Architecto necessitatibus dolores, hic accusamus, aut dignissimos labore optio consectetur fugit placeat,\n                magnam veniam? Aliquam facere incidunt laudantium minima enim amet, fuga inventore ipsam ratione? Optio\n                animi beatae maiores ducimus."
+        "description": "Extracted hourly timestamps from transaction data to identify the most active time of day. Visualized transaction counts using bar charts, showing a strong activity peak around 4 PM followed by a sharp drop after 6 PM. This analysis helps reveal customer behavior and spending patterns throughout the day."
     },
     {
         "title": "Feature Selection for Heart Disease Prediction",
         "year": "2025",
         "image": "../images/Feature Selection for Heart Disease Prediction.png",
-        "description": "Implemented a stepwise forward selection algorithm on the UCI Heart Disease dataset to identify the most predictive features for logistic regression. The model iteratively selected features that minimized cross-validation error, comparing training and test performance across 13 features. Results showed that adding up to 6 features significantly reduced cross-validation error from 0.24 to 0.16, demonstrating the trade-off between model simplicity and accuracy in medical data prediction."
+        "description": "Applied stepwise forward feature selection on the UCI Heart Disease dataset using logistic regression. The model iteratively chose features that minimized cross-validation error. Found that using around six features reduced the error from 0.24 to 0.16, illustrating the balance between model simplicity and predictive accuracy."
     },
     {
         "title": "Binary Perceptron Classification on Iris Dataset",
         "year": "2025",
         "image": "../images/Iris Classification with Binary Perceptron.png",
-        "description": "Implemented the binary Perceptron algorithm to classify Iris flower species using Sepal Width and Petal Width as features. The algorithm iteratively updated the linear decision boundary to separate two classes (y=1 and y=-1). The resulting plot visualizes the learned boundary that effectively distinguishes between the two Iris species, demonstrating how a simple linear classifier can achieve clear separation in low-dimensional feature space."
+        "description": "Implemented a binary Perceptron model to classify Iris flower species using Sepal Width and Petal Width. The algorithm iteratively adjusted the decision boundary to separate the two classes. The plot shows how a simple linear classifier can effectively distinguish species in a low-dimensional space."
     },
     {
         "title": "Multiclass Classification with Linear SVM",
         "year": "2025",
         "image": "../images/Multiclass Classification with Linear SVM.png",
-        "description": "Trained a multiclass linear Support Vector Machine (SVM) classifier using sklearn's LinearSVC on a synthetic dataset with four distinct classes. Experimented with different regularization strengths (C = 0.01, 0.1, 1.0, 10.0) and visualized the resulting decision boundaries. Observed that as C increases, the model becomes less regularized and fits the training data more closely, leading to sharper and less smooth decision regions."
+        "description": "Trained a multiclass Support Vector Machine (SVM) using LinearSVC on a synthetic dataset with four classes. Tested different regularization strengths (C = 0.01, 0.1, 1.0, 10.0) and visualized the decision boundaries. Found that larger C values make the model fit the training data more tightly, creating sharper boundaries."
     },
     {
         "title": "Kernel Perceptron with Quadratic Kernel",
         "year": "2025",
         "image": "../images/Kernel Perceptron with Quadratic Kernel.png",
-        "description": "Implemented the Kernel Perceptron algorithm using a quadratic kernel to classify 2D data with two classes. Visualized the resulting nonlinear decision boundary, showing how kernel transformations enable linear separation in higher-dimensional space. The experiment demonstrates the power of kernel methods in handling nonlinearly separable data compared to the standard Perceptron."
+        "description": "Used a Kernel Perceptron with a quadratic kernel to classify 2D data into two groups. The nonlinear boundary shows how kernel transformations allow linear separation in higher-dimensional space. This experiment highlights the advantage of kernel methods for nonlinearly separable data."
     }
 ]
