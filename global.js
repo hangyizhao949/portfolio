@@ -135,6 +135,19 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     }
 }
 
+// automatically check which folder and find the right path of the image.
+export function getImagePath(image) {
+    // 检查当前页面路径中包含的子目录
+    const depth = location.pathname.split('/').length - 2;
+
+    // portfolio → depth is 1
+    // projects/project2 → depth is2
+    // add  "../" according to depth 
+    const prefix = depth > 1 ? '../'.repeat(depth - 1) : '';
+    return prefix + image;
+}
+
+
 export async function fetchGitHubData(username) {
     // return statement here
     return fetchJSON(`https://api.github.com/users/${username}`);

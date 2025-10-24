@@ -9,6 +9,12 @@ renderProjects(latestProjects, projectsContainer, 'h2');
 const githubData = await fetchGitHubData('hangyizhao949');
 // choose container that dispaly the content
 const profileStats = document.querySelector('#profile-stats');
+
+// find the real path of image
+for (let project of latestProjects) {
+    project.image = getImagePath(project.image);
+}
+
 // if find container, then dynamically update the data showing in home page
 if (profileStats) {
     profileStats.innerHTML = `
