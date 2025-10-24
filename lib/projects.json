@@ -3,7 +3,7 @@
         "title": "Food Processing and Price Patterns Across Top Food Categories",
         "year": "2025",
         "image": "../images/Food Processing and Price Patterns Across Top Food Categories.png",
-        "description": "This visualization reveals that the relationship between food processing level and price is not consistent across categories. In prepared meals and snack bars, more processed foods (NOVA class 2 and 3) are often more expensive, while for cookies and candies, prices remain similar across all processing levels. These results suggest that processing level alone does not determine product price, factors such as brand or package weight also play a role. Overall, the relationship appears category-dependent rather than linear."
+        "description": "This visualization reveals that the relationship between food processing level and price is not consistent across categories. In prepared meals and snack bars, more processed foods (NOVA class 2 and 3) are often more expensive, while for cookies and candies, prices remain similar across all processing levels. These results suggest that processing level alone does not determine product price and the relationship appears category-dependent rather than linear."
     },
     {
         "title": "NLP Article Review",
