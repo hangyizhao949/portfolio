@@ -3,14 +3,6 @@ import { fetchJSON, renderProjects } from '../global.js';
 const projects = await fetchJSON('../lib/projects.json');
 console.log('Loaded data:', projects);
 
-
-// // ✅ 这一步在渲染前执行
-// for (let project of projects) {
-//     if (!project.image.startsWith('../')) {
-//         project.image = '../' + project.image;
-//     }
-// }
-
 const projectsContainer = document.querySelector('.projects');
 renderProjects(projects, projectsContainer, 'h2');
 

@@ -3,7 +3,7 @@ import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 const projects = await fetchJSON('./lib/projects.json');
 const latestProjects = projects.slice(0, 3);
 
-// ✅ 主页路径不用加 ../
+// home page path do not have ../
 for (let project of latestProjects) {
     if (project.image.startsWith('../')) {
         project.image = project.image.replace('../', '');

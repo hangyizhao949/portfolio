@@ -136,8 +136,6 @@ label:not(.color-scheme) {
     /* no larger than the container */
     height: auto;
     /* keep the ratio */
-    /* object-fit: cover;     如果图片比例太奇怪，会自动裁剪 */
-    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 给点阴影更干净 */
 }
 
 
