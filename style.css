@@ -120,6 +120,7 @@ label:not(.color-scheme) {
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    gap: 1.5em;
 }
 
 .projects article {
@@ -128,6 +129,17 @@ label:not(.color-scheme) {
     grid-row: span 3;
     gap: 1em;
 }
+
+/* adjust the size of the pictures */
+.projects img {
+    width: 100%;
+    /* no larger than the container */
+    height: auto;
+    /* keep the ratio */
+    /* object-fit: cover;     如果图片比例太奇怪，会自动裁剪 */
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 给点阴影更干净 */
+}
+
 
 .projects article h2 {
     margin: 0;
@@ -201,3 +213,65 @@ body.contact h2:hover {
 /* body {
     position: relative;
 } */
+
+
+#profile-stats {
+    margin-top: 30px;
+    /* background-color: transparent; */
+    color: #fff;
+}
+
+#profile-stats dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* divide in four columns */
+    text-align: center;
+    gap: 10px;
+    margin: 0;
+    padding: 20px 0;
+}
+
+#profile-stats dt {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #858282;
+    /* light grey */
+    grid-row: 1;
+}
+
+#profile-stats dd {
+    font-size: 2rem;
+    /* font-weight: bold; */
+    color: #272525;
+    margin: 0;
+    grid-row: 2;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Home page layout */
+.latest-projects {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.latest-projects article {
+    flex: 1 1 30%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.latest-projects h2,
+.latest-projects h3 {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    word-wrap: break-word;
+}
+
+.latest-projects img {
+    width: 100%;
+    border-radius: 6px;
+}
