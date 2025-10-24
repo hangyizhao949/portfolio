@@ -2,6 +2,14 @@ import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 // get the first three projects
 const projects = await fetchJSON('./lib/projects.json');
 const latestProjects = projects.slice(0, 3);
+
+// ✅ 主页路径不用加 ../
+for (let project of latestProjects) {
+    if (project.image.startsWith('../')) {
+        project.image = project.image.replace('../', '');
+    }
+}
+
 // find the projects
 const projectsContainer = document.querySelector('.projects');
 renderProjects(latestProjects, projectsContainer, 'h2');
@@ -10,12 +18,7 @@ const githubData = await fetchGitHubData('hangyizhao949');
 // choose container that dispaly the content
 const profileStats = document.querySelector('#profile-stats');
 
-// ✅ 主页路径不用加 ../
-for (let project of latestProjects) {
-    if (project.image.startsWith('../')) {
-        project.image = project.image.replace('../', '');
-    }
-}
+
 
 // if find container, then dynamically update the data showing in home page
 if (profileStats) {
