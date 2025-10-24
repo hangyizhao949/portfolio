@@ -1,4 +1,4 @@
-import { fetchJSON, renderProjects, fetchGitHubData, getImagePath } from './global.js';
+import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 // get the first three projects
 const projects = await fetchJSON('./lib/projects.json');
 const latestProjects = projects.slice(0, 3);
@@ -10,10 +10,10 @@ const githubData = await fetchGitHubData('hangyizhao949');
 // choose container that dispaly the content
 const profileStats = document.querySelector('#profile-stats');
 
-// find the real path of image
-for (let project of latestProjects) {
-    project.image = getImagePath(project.image);
-}
+// // find the real path of image
+// for (let project of latestProjects) {
+//     project.image = getImagePath(project.image);
+// }
 
 // if find container, then dynamically update the data showing in home page
 if (profileStats) {

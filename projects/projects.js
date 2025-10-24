@@ -2,6 +2,12 @@
 import { fetchJSON, renderProjects } from '../global.js';
 const projects = await fetchJSON('../lib/projects.json');
 console.log('Loaded data:', projects);
+
+
+// for (let project of projects) {
+//     project.image = getImagePath(project.image);
+// }
+
 const projectsContainer = document.querySelector('.projects');
 renderProjects(projects, projectsContainer, 'h2');
 
