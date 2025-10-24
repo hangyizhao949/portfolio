@@ -137,7 +137,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 
 // automatically check which folder and find the right path of the image.
 export function getImagePath(image) {
-    // 检查当前页面路径中包含的子目录
+    // check the subdirectory
     const depth = location.pathname.split('/').length - 2;
 
     // portfolio → depth is 1
