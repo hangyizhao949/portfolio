@@ -273,3 +273,72 @@ body.contact h2:hover {
     width: 100%;
     border-radius: 6px;
 }
+
+.year {
+    color: gray;
+    font-family: Baskerville;
+    font-variant-numeric: oldstyle-nums;
+    font-size: 1.0em;
+    margin-top: 0.3em;
+}
+
+#projects-pie-plot {
+    max-width: 20em;
+    margin-block: 2em;
+    overflow: visible;
+}
+
+
+/* the whole legend area */
+.legend {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    /* automatically change to next line */
+    /* justify-content: center; */
+    gap: 2em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    margin-top: 1.5em;
+}
+
+/* for each legend */
+.legend li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* set the swatch */
+.legend .swatch {
+    width: 1em;
+    height: 1em;
+    background-color: var(--color);
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    flex-wrap: wrap;
+    margin-block: 2em;
+}
+
+svg:has(path:hover) path:not(:hover) {
+    opacity: 0.5;
+}
+
+path {
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.selected {
+    --color: oklch(60% 45% 0) !important;
+
+    &:is(path) {
+        fill: var(--color);
+    }
+}
