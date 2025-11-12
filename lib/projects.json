@@ -6,22 +6,25 @@
         "description": "This visualization reveals that the relationship between food processing level and price is not consistent across categories. In prepared meals and snack bars, more processed foods (NOVA class 2 and 3) are often more expensive, while for cookies and candies, prices remain similar across all processing levels. These results suggest that processing level alone does not determine product price and the relationship appears category-dependent rather than linear."
     },
     {
-        "title": "NLP Article Review",
+        "title": "Persuasive or Deceptive Visualization",
         "year": "2025",
-        "image": "../images/NLP article review.png",
-        "description": "This paper introduces a better and modular way to handle bias using 'Bias Experts'.\n Instead of correcting the main model directly, they detect and filter out biased samples first.\n The combination of modular detection + loss reweighting leads to robust and generalizable models."
+        "image": "../images/persuasive visulisation.png",
+        "description": "This project explores how small design choices such as color, titles, and handling outliers, can dramatically change how data is perceived. Using the same dataset on clinic accessibility, two contrasting visualizations were created: one persuasive but potentially misleading, and another more transparent yet still imperfect. The project highlights how visualization is both powerful and subjective, requiring balance between clarity and honesty.",
+        "url": "https://hangyizhao949.github.io/DSC209-Project2/"
     },
     {
-        "title": "Iris Flower Clustering with K-Means",
+        "title": "Global Health Visualization (2012–2021)",
         "year": "2024",
-        "image": "../images/Iris Flower Clustering with K-Means.png",
-        "description": "Used K-Means clustering to find natural groups of flowers in the Iris dataset based on sepal and petal features. Visualized the results with colored scatter plots showing cluster centers. The project shows how unsupervised learning can discover patterns in data without using labels."
+        "image": "../images/global health vs economy.png",
+        "description": "An interactive D3.js visualization exploring the relationship between GDP per capita and life expectancy across countries from 2012 to 2021. Circle color encodes development score, and circle size represents population. Users can filter by region and year to observe global trends.",
+        "url": "https://k-phantastic.github.io/Global-Health-BHKL-Labs/"
     },
     {
-        "title": "Airbnb Price Analysis in San Diego",
-        "year": "2024",
-        "image": "../images/Airbnb Price Analysis in San Diego.png",
-        "description": "Analyzed Airbnb listings in San Diego using Python and data visualization. The histogram shows that most listings are in lower price ranges, with a few high-end outliers. This project explores local housing price distribution and highlights market imbalance between budget and luxury rentals."
+        "title": "Bikewatching: Boston Bike Traffic Visualization",
+        "year": "2025",
+        "image": "../images/bikewatching.png",
+        "description": "An interactive Mapbox + D3 visualization showing Bluebikes traffic patterns across Boston and Cambridge by time of day.",
+        "url": "https://hangyizhao949.github.io/bikewatching/"
     },
     {
         "title": "Weather Classification Using Decision Tree and Logistic Regression",
