@@ -431,7 +431,7 @@ function updateFileDisplay(filteredCommits) {
         .attr('style', (d) => `--color: ${colors(d.type)}`);
 }
 
-main();
+await main();
 
 
 function onStepEnter(response) {
